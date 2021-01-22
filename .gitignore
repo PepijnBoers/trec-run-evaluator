@@ -1,0 +1,13 @@
+.DS_Store
+**/__pycache__
+
+trec_eval
+venv
+
+runs/*
+!runs/sample1.txt
+!runs/sample2.txt
+!runs/sample3.txt
+
+qrels/*
+!qrels/qrels.backgroundlinking19.txt
