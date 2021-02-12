@@ -11,9 +11,18 @@ from scipy.stats import ttest_rel
 
 import layout
 from evaluator import trec_eval
-from utils import (files_in_folder, find_relevance, fuse_runs,
-                   mark_current_runs, mark_new, mark_new_text, new_percentage,
-                   read_qrels, read_run, write_to_file)
+from utils import (
+    files_in_folder,
+    find_relevance,
+    fuse_runs,
+    mark_current_runs,
+    mark_new,
+    mark_new_text,
+    new_percentage,
+    read_qrels,
+    read_run,
+    write_to_file,
+)
 
 pd.options.plotting.backend = "plotly"
 
@@ -404,8 +413,9 @@ def update_graphs(qrels, run1, run2, metric, top):
                         ],
                         [
                             f"{ttest_rel(df_a, df_all[col])[1][0]:.4f}"
-                            for col in df_all[medians_desc.index].columns
                             if col != run1
+                            else "X"
+                            for col in df_all[medians_desc.index].columns
                         ],
                     ],
                     line_color="darkslategray",
