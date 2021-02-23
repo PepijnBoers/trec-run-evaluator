@@ -1,20 +1,10 @@
 import dash_html_components as html
+import dash_bootstrap_components as dbc
 
 
 def succeed_button():
     return html.Div(
         [
-            html.H5("Success"),
+            dbc.Alert('Success!', color='success', dismissable=True)
         ],
-        style={
-            "margin-left": 50,
-            "margin-top": 5,
-            "color": "white",
-            "text-size": 10,
-            "width": 150,
-            "height": 40,
-            "background-color": "green",
-            "border-radius": 25,
-            "text-align": "center",
-        },
     )
